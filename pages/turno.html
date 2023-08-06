@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../image/favicon_io/favicon-32x32.png" type="favicon-32x32">
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Peluqeria</title>
+</head>
+<body>
+    <header>
+        <div class="cabeza">
+            <input type="text" class="buscador" placeholder="que necesitas?">
+            <ul class="lista redes-sociales">
+                <li><a href="#"><img class="redes" src="../image/redes/pngwing.com (2).png" alt="Instagram"></a></li>
+                <li><a href="#"><img class="redes" src="../image/redes/pngwing.com (1).png" alt="WhatApp"></a></li>
+                <li><a href="#"><img class="redes" src="../image/redes/pngwing.com .png" alt="Faceboock"></a></li>
+            </ul>
+        </div>
+        <div class="imagenlogo">
+            <img class="logo" src="../image/logo/logo-corto.png" alt="logo">
+        </div>
+        <nav class="menu">
+            <ul class="lista navegacion">
+                <li class="navegacion-li"><a href="../index.html">Principal</a></li>
+                <li class="navegacion-li"><a href="./turno.html">Reserva tu turno</a></li>
+                <li class="navegacion-li"><a href="./estilos.html">Estilos</a></li>
+                <li class="navegacion-li"><a href="./tienda.html">Tienda</a></li>
+                <li class="navegacion-li"><a href="./nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Turno 🗓️</h1>
+        <form action="" class="turno-formulario">
+            <div class="formulario">
+                <div>
+                    <input type="text" name="name" required placeholder="Nombre">
+                    <input type="text" name="surname" required placeholder="Apellido">
+                </div>
+                <div>
+                    <input type="number" name="documento" required placeholder="Numero de documento">  
+                </div>
+                <div>
+                    <label for="sucursal">Ingrese el local al que desea asistir</label>
+                    <select name="sucursal" id="" >
+                        <option value="suc1">Sucursal 1</option>
+                        <option value="suc2">Sucursal 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fecha">Ingrese la fecha y hora</label>
+                    <input type="datetime-local" required name="fecha">
+                </div>
+                <div>
+                    <input type="submit" value="Completar Reserva">
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h3>© Copyright </h3>
+        <h3>📞 +11111111111</h3>
+    </footer>
+</body>
+</html>

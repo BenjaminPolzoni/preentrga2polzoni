@@ -1,0 +1,189 @@
+/* Encabezado y etiquetas generales */
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    background-color:bisque;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* barra de navegacion */
+header {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cabeza cabeza cabeza cabeza"
+      "imagenlogo menu menu menu"
+      "imagenlogo menu menu menu";
+    
+}
+.cabeza{
+    grid-area: cabeza;
+    background-color: rgb(65, 46, 17);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buscador{
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+}
+.imagenlogo { grid-area: imagenlogo; 
+    display: flex;
+    justify-content: center;
+    background-color:rgb(249, 209, 160) ;
+    
+}
+  
+.menu { grid-area: menu; 
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color:rgb(249, 209, 160) ;
+}
+
+.lista{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.redes-sociales{
+    justify-content: center;
+    align-items: end;
+}
+.navegacion{
+    display: flex;
+    text-align: center;
+}
+.navegacion-li{
+    padding: 40px;
+    margin: 10px;
+    border: gray 2px solid;
+    border-radius: 5px;
+    
+}
+.navegacion-li:hover{
+    background-color: azure;
+}
+/* main del index */
+
+
+footer{
+    grid-area: footer; 
+    color: rgb(155, 162, 167);
+    background-color: black;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+nav{
+    padding: 20px;
+}
+ul{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: rgb(38, 38, 35);
+}
+.redes{
+    width: 40px;
+}
+.logo{
+    margin: 4px;
+    border: 4px rgb(65, 46, 17) double;
+    width: 300px;
+}
+.imagenlogo{
+    text-align: center;
+}
+
+/* En el index */
+.recomendaciones{
+    width: 300px;
+}
+.cortes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.titulos{
+    background-color: rgb(255, 204, 142);
+    margin: 20px;
+    border: 3px rgb(74, 72, 72) solid;
+}
+
+/* quienes somos */
+.descripcion{
+    padding: 3px;
+    margin: 20px;
+    display: flex;
+    
+}
+.quien{
+    padding: 10px;
+    margin: 5px;
+    border: 3px black double;
+}
+.somos{
+    background-color: burlywood;
+}
+.mapas{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.ubi{
+    color:rgb(102, 98, 98);
+}
+.empleados{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.img-peluqueros{
+    width: 300px;
+}
+
+/* tienda */
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* estilos */
+.imgcortes{
+    width: 500px;
+}
+
+/* formulario */
+.formulario{
+    background-color: burlywood;
+    margin: 10px 300px ;
+    padding: 5px;
+    border-radius: 10px;
+   
+    align-content: space-around;
+    justify-content: center;
+}
