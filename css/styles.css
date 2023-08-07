@@ -71,7 +71,7 @@ header {  display: grid;
     padding: 40px;
     margin: 10px;
     border: gray 2px solid;
-    border-radius: 5px;
+    border-radius: 30px;
     
 }
 .navegacion-li:hover{
@@ -120,7 +120,7 @@ a{
 /* main del index */
 .main-index {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-auto-flow: row;
   grid-template-areas:
     "titulo-index titulo-index titulo-index"
