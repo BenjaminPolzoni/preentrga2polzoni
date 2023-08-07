@@ -13,7 +13,16 @@ body {
     background-color: rgb(255, 204, 142);
     margin: 0px;
     border: 3px rgb(74, 72, 72) solid;
+    margin: 10px 40px ;
 
+}
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 5px;
 }
 /* barra de navegacion */
 header {  display: grid;
@@ -197,10 +206,49 @@ background-color: rgb(65, 46, 17);
     background-color: rgb(65, 46, 17);}
 
 .filtros { grid-area: filtros; 
-background-color: rgb(126, 126, 126);}
+    background-color: rgb(126, 126, 126);
+}
 
 .imgcortes{
     width: 500px;
+}
+/* main de tienda*/
+.main-tienda {  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titulo-tienda titulo-tienda titulo-tienda titulo-tienda titulo-tienda"
+    "filtros-tienda tienda-promociones tienda-promociones tienda-promociones tienda-promociones"
+    "filtros-tienda tienda-geles tienda-geles tienda-geles tienda-geles"
+    "filtros-tienda tienda-tijeras tienda-tijeras tienda-tijeras tienda-tijeras"
+    "filtros-tienda tienda-tintes tienda-tintes tienda-tintes tienda-tintes";
+}
+.titulo-tienda{
+    grid-area: titulo-tienda;
+    display: flex;
+    justify-content: center;
+   }
+   
+.tienda-promociones { grid-area: tienda-promociones; 
+    background-color: rgb(65, 46, 17) ;
+
+}
+
+.tienda-geles { grid-area: tienda-geles; 
+    background-color: rgb(107, 77, 31);
+}
+
+.tienda-tijeras { grid-area: tienda-tijeras; 
+    background-color: rgb(65, 46, 17)
+}
+
+.tienda-tintes { grid-area: tienda-tintes; 
+    background-color: rgb(107, 77, 31);
+}
+
+.filtros-tienda { grid-area: filtros-tienda; 
+    background-color: rgb(126, 126, 126);
 }
 
 /* quienes somos */
@@ -235,16 +283,6 @@ background-color: rgb(126, 126, 126);}
 }
 .img-peluqueros{
     width: 300px;
-}
-
-/* tienda */
-.productos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-    margin: 10px;
-    padding: 5px;
 }
 
 /* formulario */
