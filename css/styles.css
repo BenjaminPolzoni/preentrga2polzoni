@@ -65,7 +65,9 @@ header {  display: grid;
     justify-content: start;
     background-color:rgb(249, 209, 160) ;
 }
-
+.nav-link{
+    color: black;
+}
 .lista{
     list-style: none;
     display: flex;
@@ -140,23 +142,17 @@ a{
 .ofertas-destacadas { grid-area: ofertas-destacadas; 
     background-color:  rgb(65, 46, 17);
     padding-top: 2rem;
-
-}
-
-.recomendaciones{
-    width: 350px;
 }
 .carousel{
     width: 750px ;
     margin-top: 2rem;
-    
 }
 .color-carrusel{
     color: rgb(0, 0, 0);
     background-color: azure;
 }
 .card{
-    width: 15%;
+    width: 17%  ;
     background-color: bisque;
 }
 .card-title{
@@ -312,12 +308,11 @@ background-color: rgb(65, 46, 17);
 }
 
 /* distinto dispositivo */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1111px) {
     /* cabeza responsiv */
     header {  display: grid;
         grid-template-columns: 1fr 1fr ;
         grid-template-rows: auto 1fr 1fr;
-        gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
           "cabeza cabeza "
@@ -325,18 +320,24 @@ background-color: rgb(65, 46, 17);
           "menu menu";
         
     }
-    .navegacion{
-        display: flex;
-        text-align: center;
-        width: 100px;
+    .imagenlogo{
+        justify-content: center;
     }
-
+    .navegacion-li{
+        margin-left: 0;
+        justify-content: center;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 750px) {
     /* main-index responsiv */
-    .main-turnos {  display: grid;
+    .main-index {  display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
         grid-auto-columns: 1fr;
-        gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
           "titulo-index titulo-index"
@@ -349,9 +350,27 @@ background-color: rgb(65, 46, 17);
         justify-content: center;
         align-items: center;
     }
-      
     .estilos-populares { grid-area: estilos-populares; }
-      
-    .ofertas-destacadas { grid-area: ofertas-destacadas; }
-      
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    /* main-tienda responsiv*/
+    .main-tienda {  display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-rows: 1fr auto auto auto auto auto;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "titulo-tienda titulo-tienda titulo-tienda"
+          "filtros-tienda filtros-tienda filtros-tienda"
+          "tienda-promociones tienda-promociones tienda-promociones"
+          "tienda-geles tienda-geles tienda-geles"
+          "tienda-tijeras tienda-tijeras tienda-tijeras"
+          "tienda-tintes tienda-tintes tienda-tintes";
+    }
 }
