@@ -50,11 +50,15 @@ header {  display: grid;
 }
 .imagenlogo { grid-area: imagenlogo; 
     display: flex;
-    justify-content: center;
-    background-color:rgb(249, 209, 160) ;
-    
+    justify-content: end;
+    background-color:rgb(249, 209, 160);
 }
-  
+.logo{
+    margin: 4px;
+    border: 4px rgb(65, 46, 17) double;
+    width: 200px;
+}
+
 .menu { grid-area: menu; 
     display: flex;
     align-items: center;
@@ -71,20 +75,15 @@ header {  display: grid;
     justify-content: center;
     align-items: end;
 }
-.navegacion{
-    display: flex;
-    text-align: center;
-}
+
 .navegacion-li{
     padding: 25px;
-    margin: 10px;
-    border: gray 2px solid;
+    margin-left: 12rem;
+    border: rgb(65, 46, 17) 2px solid;
     border-radius: 10px;
     
 }
-.navegacion-li:hover{
-    background-color: azure;
-}
+
 
 footer{
     grid-area: footer; 
@@ -113,11 +112,7 @@ a{
 .redes{
     width: 40px;
 }
-.logo{
-    margin: 4px;
-    border: 4px rgb(65, 46, 17) double;
-    width: 300px;
-}
+
 .imagenlogo{
     text-align: center;
 }
