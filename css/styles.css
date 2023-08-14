@@ -115,14 +115,10 @@ a{
     width: 40px;
 }
 
-.imagenlogo{
-    text-align: center;
-}
-
 /* main del index */
 .main-index {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 0.6fr 1fr auto;
   grid-auto-flow: row;
   grid-template-areas:
     "titulo-index titulo-index titulo-index"
@@ -131,6 +127,7 @@ a{
 }
 .titulo-index{
     grid-area: titulo-index;
+    background-image: url(../image/logo/2b7b11_14.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +149,7 @@ a{
     background-color: azure;
 }
 .card{
-    width: 17%  ;
+    width: 18%  ;
     background-color: bisque;
 }
 .card-title{
@@ -182,6 +179,7 @@ a{
 }
 .titulo-estilos{
  grid-area: titulo-estilos;
+ background-image: url(../image/logo/2b7b11_14.jpg);
  display: flex;
  justify-content: center;
 }
@@ -213,6 +211,7 @@ background-color: rgb(65, 46, 17);
 }
 .titulo-tienda{
     grid-area: titulo-tienda;
+    background-image: url(../image/logo/2b7b11_14.jpg);
     display: flex;
     justify-content: center;
    }
@@ -239,7 +238,11 @@ background-color: rgb(65, 46, 17);
 }
 
 /* quienes somos */
-.descripcion{
+.titulo-nosotros{
+    display: flex;
+    text-align: center;
+}
+.nosotros-descripcion{
     padding: 3px;
     margin: 20px;
     display: flex;
@@ -285,6 +288,7 @@ background-color: rgb(65, 46, 17);
 }
 
 .titulo-turnos { grid-area: titulo-turnos; 
+    background-image: url(../image/logo/2b7b11_14.jpg);
     
 }
 
@@ -332,7 +336,7 @@ background-color: rgb(65, 46, 17);
         justify-content: center;
     }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 480px) {
     /* main-index responsiv */
     .main-index {  display: grid;
         grid-template-columns: 1fr 1fr;
@@ -346,18 +350,25 @@ background-color: rgb(65, 46, 17);
     }
       
     .titulo-index { grid-area: titulo-index; 
+        background-image: none;
+        background: linear-gradient(to top, bisque, rgb(249, 209, 160));
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .estilos-populares { grid-area: estilos-populares; }
+    .estilos-populares { grid-area: estilos-populares; 
+        
+    }
     .productos{
         display: flex;
         flex-wrap: wrap;
+        justify-content: start;
+        justify-content: space-around;
     }
     .card{
-        width: 200px;
+        width: 180px;
         margin-top: 10px;
+        
     }
 
     /* main-tienda responsiv*/

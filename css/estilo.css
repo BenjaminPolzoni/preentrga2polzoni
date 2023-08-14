@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: bisque;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  body h1 {
+    text-align: center;
+    margin: 3rem; }
+  body h2 {
+    text-align: center; }
+  body ul {
+    list-style: none; }
+  body a {
+    text-decoration: none;
+    color: #262623; }
+  body .titulos {
+    background-color: #ffcc8e;
+    margin: 0px;
+    border: 3px #4a4848 solid;
+    margin: 10px 40px; }
+  body .productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 5px; }
+    body .productos .card {
+      width: 17%;
+      background-color: bisque; }
+      body .productos .card .card-title {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        border-radius: 4px;
+        color: beige;
+        text-align: center; }
+  body header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1.5fr 1.5fr;
+    grid-auto-flow: row;
+    grid-template-areas: "cabeza cabeza cabeza cabeza" "imagenlogo menu menu menu" "imagenlogo menu menu menu"; }
+    body header .cabeza {
+      grid-area: cabeza;
+      background-color: #412e11;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      body header .cabeza .buscador {
+        border-radius: 2210px;
+        width: 400px;
+        height: 50px; }
+      body header .cabeza .lista {
+        list-style: none;
+        display: flex;
+        flex-direction: row; }
+      body header .cabeza .redes-sociales {
+        justify-content: center;
+        align-items: end; }
+        body header .cabeza .redes-sociales .redes {
+          width: 40px; }
+    body header .imagenlogo {
+      grid-area: imagenlogo;
+      display: flex;
+      justify-content: end;
+      background-color: #f9d1a0; }
+      body header .imagenlogo .logo {
+        margin: 4px;
+        border: 4px #412e11 double;
+        border-radius: 50%;
+        width: 200px; }
+    body header .menu {
+      grid-area: menu;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      background-color: #f9d1a0; }
+      body header .menu .navegacion-li {
+        padding: 25px;
+        margin-left: 12rem;
+        border: #412e11 2px solid;
+        border-radius: 10px; }
+      body header .menu .nav-link {
+        color: black; }
+  body .main-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1fr auto;
+    grid-auto-flow: row;
+    grid-template-areas: "titulo-index titulo-index titulo-index" "estilos-populares estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas ofertas-destacadas"; }
+    body .main-index .titulo-index {
+      grid-area: titulo-index;
+      background-image: url(../image/logo/2b7b11_14.jpg);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body .main-index .estilos-populares {
+      grid-area: estilos-populares;
+      background-color: #412e11; }
+      body .main-index .estilos-populares .cortes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly; }
+        body .main-index .estilos-populares .cortes .carousel {
+          width: 750px;
+          margin-top: 2rem; }
+          body .main-index .estilos-populares .cortes .carousel .color-carrusel {
+            color: black;
+            background-color: azure; }
+    body .main-index .ofertas-destacadas {
+      grid-area: ofertas-destacadas;
+      background-color: #412e11;
+      padding-top: 2rem; }
+  body footer {
+    grid-area: footer;
+    color: #9ba2a7;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px; }

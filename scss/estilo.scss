@@ -1,0 +1,165 @@
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:bisque;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    h1{
+        text-align: center;
+        margin: 3rem;
+    }
+    h2{
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        
+    }
+    a{
+        text-decoration: none;
+        color: rgb(38, 38, 35);
+    }
+    .titulos{
+        background-color: rgb(255, 204, 142);
+        margin: 0px;
+        border: 3px rgb(74, 72, 72) solid;
+        margin: 10px 40px ;
+    
+    }
+    .productos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+        margin: 10px;
+        padding: 5px;
+        .card{
+            width: 17%  ;
+            background-color: bisque;
+            .card-title{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: black;
+                border-radius: 4px;
+                color: beige;
+                text-align: center;
+            }
+        }
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1.5fr 1.5fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "cabeza cabeza cabeza cabeza"
+            "imagenlogo menu menu menu"
+            "imagenlogo menu menu menu";
+        .cabeza{
+            grid-area: cabeza;
+            background-color: rgb(65, 46, 17);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .buscador{
+                border-radius: 2210px;
+                width: 400px;
+                height: 50px;
+            }
+            .lista{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+            }
+            .redes-sociales{
+                justify-content: center;
+                align-items: end;
+                .redes{
+                    width: 40px;
+                }                
+            }
+        }
+        .imagenlogo { grid-area: imagenlogo; 
+            display: flex;
+            justify-content: end;
+            background-color:rgb(249, 209, 160);
+            .logo{
+                margin: 4px;
+                border: 4px rgb(65, 46, 17) double;
+                border-radius: 50%;
+                width: 200px;
+            }
+        }
+        .menu { grid-area: menu; 
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            background-color:rgb(249, 209, 160) ;
+            .navegacion-li{
+                padding: 25px;
+                margin-left: 12rem;
+                border: rgb(65, 46, 17) 2px solid;
+                border-radius: 10px;
+                
+            }
+            .nav-link{
+                color: black;
+            }
+            
+        }
+    }
+    .main-index {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.6fr 1fr auto;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "titulo-index titulo-index titulo-index"
+          "estilos-populares estilos-populares estilos-populares"
+          "ofertas-destacadas ofertas-destacadas ofertas-destacadas";
+        
+        .titulo-index{
+            grid-area: titulo-index;
+            background-image: url(../image/logo/2b7b11_14.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .estilos-populares { grid-area: estilos-populares;
+            background-color:  rgb(65, 46, 17);
+            
+            .cortes{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                justify-content: space-evenly;
+                
+                .carousel{
+                    width: 750px ;
+                    margin-top: 2rem;
+                    .color-carrusel{
+                        color: rgb(0, 0, 0);
+                        background-color: azure;
+                    }
+                }
+            } 
+        
+        }
+        .ofertas-destacadas { grid-area: ofertas-destacadas; 
+            background-color:  rgb(65, 46, 17);
+            padding-top: 2rem;
+
+        }
+    }
+
+    footer{
+        grid-area: footer; 
+        color: rgb(155, 162, 167);
+        background-color: black;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+}
