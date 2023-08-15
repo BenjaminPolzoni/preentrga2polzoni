@@ -1,4 +1,4 @@
-$color_fondo: rgb(250, 217, 176);
+$color_fondo: rgb(249, 209, 160);
 $color_fondo_claro: rgb(250, 228, 201);
 $color_fondo_oscuro: rgb(65, 46, 17);
 $color_fondo_marron: rgb(107, 77, 31);
@@ -13,6 +13,7 @@ body{
     h1{
         text-align: center;
         margin: 3rem;
+        color: aliceblue;
     }
     h2{
         text-align: center;
@@ -41,12 +42,12 @@ body{
         padding: 5px;
         .card{
             width: 17%  ;
-            background-color: bisque;
+            background-color: $color_fondo_claro;
             .card-title{
                 font-family: 'Times New Roman', Times, serif;
                 background-color: black;
                 border-radius: 4px;
-                color: beige;
+                color: beige ;
                 text-align: center;
             }
         }
@@ -54,7 +55,7 @@ body{
     header{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 1.5fr 1.5fr;
+        grid-template-rows: auto 1.7fr 1.7fr;
         grid-auto-flow: row;
         grid-template-areas:
             "cabeza cabeza cabeza cabeza"
@@ -62,7 +63,7 @@ body{
             "imagenlogo menu menu menu";
         .cabeza{
             grid-area: cabeza;
-            background-color: rgb(65, 46, 17);
+            background-color:$color_fondo_oscuro;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -88,7 +89,8 @@ body{
         .imagenlogo { grid-area: imagenlogo; 
             display: flex;
             justify-content: end;
-            background-color:rgb(249, 209, 160);
+            background-color:$color_fondo;
+            margin-bottom: 10px ;
             .logo{
                 margin: 4px;
                 border: 4px rgb(65, 46, 17) double;
@@ -116,7 +118,7 @@ body{
     }
     .main-index {  display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.3fr 1fr 0.7fr;
+        grid-template-rows: auto 1fr 0.7fr;
         grid-auto-flow: row;
         grid-template-areas:
           "titulo-index titulo-index titulo-index"
@@ -125,7 +127,7 @@ body{
         
         .titulo-index{
             grid-area: titulo-index;
-            background-image: url(../image/logo/2b7b11_14.jpg);
+            background-image:linear-gradient($color_fondo, $color_fondo_marron);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -141,7 +143,7 @@ body{
                 
                 .carousel{
                     width: 750px ;
-                    margin-top: 2rem;
+                    margin: 1rem 10px;
                     .color-carrusel{
                         color: rgb(0, 0, 0);
                         background-color: $color_fondo_claro;
@@ -168,7 +170,7 @@ body{
         
         .titulo-estilos{
             grid-area: titulo-estilos;
-            background-image: url(../image/logo/2b7b11_14.jpg);
+            background-image: linear-gradient($color_fondo, $color_fondo_oscuro);
             display: flex;
             justify-content: center;
         }
@@ -196,7 +198,7 @@ body{
         
         .titulo-tienda{
             grid-area: titulo-tienda;
-            background-image: url(../image/logo/2b7b11_14.jpg);
+            background-image: linear-gradient($color_fondo, $color_fondo_oscuro);
             display: flex;
             justify-content: center;
         }
@@ -217,8 +219,8 @@ body{
         }
     }
     .main-turnos {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows:  auto 1fr 1fr 1fr;
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+        grid-template-rows:  1fr 1fr 1fr 1fr;
         grid-auto-flow: row;
         grid-template-areas:
           "titulo-turnos titulo-turnos titulo-turnos titulo-turnos"
@@ -226,8 +228,10 @@ body{
           "costado-izquierdo formulario formulario costado-derecho"
           "costado-izquierdo formulario formulario costado-derecho";
         
+        background-color: $color_fondo_marron;
+
         .titulo-turnos { grid-area: titulo-turnos; 
-            background-image: url(../image/logo/2b7b11_14.jpg);    
+            background-image: linear-gradient($color_fondo, $color_fondo_marron);    
         }
         .costado-izquierdo { grid-area: costado-izquierdo; 
         
@@ -237,7 +241,7 @@ body{
         .formulario { grid-area: formulario; 
             background-color: $color_fondo_oscuro ;
             color: $color_fondo;
-            margin: 40px 10px ;
+            margin: 40px 5px ;
             padding: 10px 30px;
             border-radius: 10px;
             .enviar{
@@ -249,21 +253,23 @@ body{
     }
     .main-nosotros {  display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto 1fr 1fr;
+        grid-template-rows: auto auto auto 1fr;
         grid-auto-flow: row;
         grid-template-areas:
           "titulo-nosotros titulo-nosotros titulo-nosotros titulo-nosotros"
           "descripcion-nosotros descripcion-nosotros descripcion-nosotros descripcion-nosotros"
           "nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion"
-          "empleados-nosotros empleados-nosotros empleados-nosotros empleados-nosotros";
+          "nosotros-empleados nosotros-empleados nosotros-empleados nosotros-empleados";
+        
+        background-color: $color_fondo_marron;
       
         .titulo-nosotros { grid-area: titulo-nosotros; 
             display: flex;
             justify-content: center;
-            background-image: url(../image/logo/2b7b11_14.jpg);
+            background-image: linear-gradient($color_fondo, $color_fondo_marron);
         }
         .descripcion-nosotros { grid-area: descripcion-nosotros;
-            background-color: $color_fondo_marron;
+            
             .quien{
                 padding: 10px;
                 margin: 5px;
@@ -271,16 +277,13 @@ body{
                 margin: 5px 3rem;
                 display: flex;
                 justify-content: center;
+                background-color: $color_fondo;
+                margin: 3rem;
+                .quien-texto{
+                    font-size: large;
+                }
             }
-            .somos{
-                margin: 10px 3rem ;
-                background-color: burlywood;
-                border: 3px black solid;
-                display: flex;
-                justify-content: center;
-            } 
         }
-      
         .nosotros-ubicacion { grid-area: nosotros-ubicacion; 
             background-color: $color_fondo_oscuro;
             .ubicaciones{
@@ -296,12 +299,11 @@ body{
             }
         }
       
-        .empleados-nosotros { grid-area: empleados-nosotros; 
+        .nosotros-empleados { grid-area: nosotros-empleados; 
             background-color: $color_fondo_marron;
             .empleados{
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
                 justify-content: space-evenly;
                 margin-top: 20px;
                 .img-peluqueros{
