@@ -118,7 +118,7 @@ a{
 /* main del index */
 .main-index {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.6fr 1fr auto;
+  grid-template-rows: 0.6fr 1fr 0.7fr;
   grid-auto-flow: row;
   grid-template-areas:
     "titulo-index titulo-index titulo-index"
@@ -194,9 +194,6 @@ background-color: rgb(65, 46, 17);
     background-color: rgb(126, 126, 126);
 }
 
-.imgcortes{
-    width: 500px;
-}
 /* main de tienda*/
 .main-tienda {  display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
@@ -214,7 +211,7 @@ background-color: rgb(65, 46, 17);
     background-image: url(../image/logo/2b7b11_14.jpg);
     display: flex;
     justify-content: center;
-   }
+}
    
 .tienda-promociones { grid-area: tienda-promociones; 
     background-color: rgb(65, 46, 17) ;
@@ -238,16 +235,39 @@ background-color: rgb(65, 46, 17);
 }
 
 /* quienes somos */
-.titulo-nosotros{
-    display: flex;
-    text-align: center;
+
+.main-nosotros {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo-nosotros titulo-nosotros titulo-nosotros titulo-nosotros"
+      "nosotros-descripcion nosotros-descripcion nosotros-descripcion nosotros-descripcion"
+      "nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion nosotros-ubicacion"
+      "nosotros-empleados nosotros-empleados nosotros-empleados empleados-nosotros";
 }
-.nosotros-descripcion{
+
+.titulo-nosotros { grid-area: titulo-nosotros; 
+    display: flex;
+    justify-content: center;
+    background-image: url(../image/logo/2b7b11_14.jpg);
+}
+  
+.nosotros-descripcion { grid-area: nosotros-descripcion; 
     padding: 3px;
     margin: 20px;
     display: flex;
-    
+    flex-direction: row;
 }
+
+.nosotros-ubicacion { grid-area: nosotros-ubicacion; 
+
+}
+ 
+.empleados-nosotros { grid-area: empleados-nosotros; 
+
+}
+
 .quien{
     padding: 10px;
     margin: 5px;
@@ -255,14 +275,17 @@ background-color: rgb(65, 46, 17);
 }
 .somos{
     background-color: burlywood;
+    border: 3px black solid;
 }
-.mapas{
+.ubicaciones{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
 }
-.ubi{
-    color:rgb(102, 98, 98);
+.mapa{
+    width: 600px;
+    height: 400px;
+    margin-top: 20px;
 }
 .empleados{
     display: flex;
@@ -295,21 +318,17 @@ background-color: rgb(65, 46, 17);
 .formulario { grid-area: formulario; 
     background-color: rgb(65, 46, 17) ;
     color: bisque;
-    margin: 10px 30px ;
-    padding: 5px;
+    margin: 40px 10px ;
+    padding: 10px 30px;
     border-radius: 10px;
 }
-
+.enviar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px ;
+}
 .costado-izquierdo { grid-area: costado-izquierdo; }
-
 .costado-derecho { grid-area: costado-derecho; }
-
-.boton-subir{
-    width: 200px 100px;
-}
-.mb-3{
-    padding: 10px 40px;
-}
 
 /* distinto dispositivo */
 @media screen and (max-width: 1111px) {
