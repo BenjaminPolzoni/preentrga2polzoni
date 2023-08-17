@@ -41,7 +41,7 @@ body{
         margin: 10px;
         padding: 5px;
         .card{
-            width: 17%  ;
+            width: 19% ;
             background-color: $color_fondo_claro;
             .card-title{
                 font-family: 'Times New Roman', Times, serif;
@@ -91,10 +91,11 @@ body{
             justify-content: end;
             background-color:$color_fondo;
             margin-bottom: 10px ;
+            margin-top: 10px;
             .logo{
                 margin: 4px;
                 border: 4px rgb(65, 46, 17) double;
-                border-radius: 50%;
+                border-radius: 49%;
                 width: 200px;
             }
         }
@@ -105,7 +106,7 @@ body{
             background-color:rgb(249, 209, 160) ;
             .navegacion-li{
                 padding: 25px;
-                margin-left: 12rem;
+                margin-left: 7rem;
                 border: rgb(65, 46, 17) 2px solid;
                 border-radius: 10px;
                 
@@ -114,6 +115,29 @@ body{
                 color: black;
             }
             
+        }
+        @media screen and (max-width: 1111px) {
+            /* cabeza responsiv */
+            header {  display: grid;
+                grid-template-columns: 1fr 1fr ;
+                grid-template-rows: auto 1fr 1fr;
+                grid-auto-flow: row;
+                grid-template-areas:
+                  "cabeza cabeza "
+                  "imagenlogo imagenlogo"
+                  "menu menu";
+                .imagenlogo{
+                    justify-content: center;
+                }
+                .menu{
+                    display: flex;
+                    justify-content: center;
+                    .navegacion-li{
+                        margin-left: 0;
+                        justify-content: center;
+                    }
+                }   
+            }
         }
     }
     .main-index {  display: grid;
@@ -312,7 +336,6 @@ body{
             }
         }
     }
-      
 
     footer{
         grid-area: footer; 
@@ -323,13 +346,32 @@ body{
         justify-content: space-between;
         padding: 10px;
     }
-    
-    @media screen and (max-width: 480px) {
-        .card{
-            width: 180px;
-            margin-top: 10px;
+    @media screen and (max-width: 1023px) {
+        /* cabeza responsiv */
+        header {  display: grid;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: auto 1fr 1fr;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "cabeza cabeza "
+              "imagenlogo imagenlogo"
+              "menu menu";
+            .imagenlogo{
+                justify-content: center;
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
             
+            .menu{
+                justify-content: center;
+                .navegacion-li{
+                    margin-left: 0;
+                    margin: 1rem;
+                }
+            }
         }
+    }
+    @media screen and (max-width: 480px) {
         /* main-index responsiv */
         .main-index {  display: grid;
             grid-template-columns: 1fr 1fr;
@@ -340,34 +382,8 @@ body{
               "titulo-index titulo-index"
               "estilos-populares estilos-populares"
               "ofertas-destacadas ofertas-destacadas";
-            .titulo-index { grid-area: titulo-index; 
-                background-image: none;
-                background: linear-gradient(to top, bisque, rgb(249, 209, 160));
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .estilos-populares { grid-area: estilos-populares;
-            }
-            .productos{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: start;
-                justify-content: space-around;
-            }
-        }
-        /* main-tienda responsiv*/
-        .main-tienda {  display: grid;
-            grid-template-columns: 0.5fr 1fr 1fr;
-            grid-template-rows: 1fr auto auto auto auto auto;
-            grid-auto-flow: row;
-            grid-template-areas:
-              "titulo-tienda titulo-tienda titulo-tienda"
-              "filtros-tienda filtros-tienda filtros-tienda"
-              "tienda-promociones tienda-promociones tienda-promociones"
-              "tienda-geles tienda-geles tienda-geles"
-              "tienda-tijeras tienda-tijeras tienda-tijeras"
-              "tienda-tintes tienda-tintes tienda-tintes";
+            
+            
         }
     }
 }

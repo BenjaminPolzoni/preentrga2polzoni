@@ -30,7 +30,7 @@ body {
     margin: 10px;
     padding: 5px; }
     body .productos .card {
-      width: 17%;
+      width: 19%;
       background-color: #fae4c9; }
       body .productos .card .card-title {
         font-family: 'Times New Roman', Times, serif;
@@ -69,11 +69,12 @@ body {
       display: flex;
       justify-content: end;
       background-color: #f9d1a0;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      margin-top: 10px; }
       body header .imagenlogo .logo {
         margin: 4px;
         border: 4px #412e11 double;
-        border-radius: 50%;
+        border-radius: 49%;
         width: 200px; }
     body header .menu {
       grid-area: menu;
@@ -83,11 +84,28 @@ body {
       background-color: #f9d1a0; }
       body header .menu .navegacion-li {
         padding: 25px;
-        margin-left: 12rem;
+        margin-left: 7rem;
         border: #412e11 2px solid;
         border-radius: 10px; }
       body header .menu .nav-link {
         color: black; }
+    @media screen and (max-width: 1111px) {
+      body header {
+        /* cabeza responsiv */ }
+        body header header {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto 1fr 1fr;
+          grid-auto-flow: row;
+          grid-template-areas: "cabeza cabeza " "imagenlogo imagenlogo" "menu menu"; }
+          body header header .imagenlogo {
+            justify-content: center; }
+          body header header .menu {
+            display: flex;
+            justify-content: center; }
+            body header header .menu .navegacion-li {
+              margin-left: 0;
+              justify-content: center; } }
   body .main-index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -244,37 +262,31 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px; }
+  @media screen and (max-width: 1023px) {
+    body {
+      /* cabeza responsiv */ }
+      body header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas: "cabeza cabeza " "imagenlogo imagenlogo" "menu menu"; }
+        body header .imagenlogo {
+          justify-content: center;
+          margin-bottom: 0;
+          margin-top: 10px; }
+        body header .menu {
+          justify-content: center; }
+          body header .menu .navegacion-li {
+            margin-left: 0;
+            margin: 1rem; } }
   @media screen and (max-width: 480px) {
     body {
-      /* main-index responsiv */
-      /* main-tienda responsiv*/ }
-      body .card {
-        width: 180px;
-        margin-top: 10px; }
+      /* main-index responsiv */ }
       body .main-index {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
         grid-auto-columns: 1fr;
         grid-auto-flow: row;
-        grid-template-areas: "titulo-index titulo-index" "estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas"; }
-        body .main-index .titulo-index {
-          grid-area: titulo-index;
-          background-image: none;
-          background: linear-gradient(to top, bisque, #f9d1a0);
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        body .main-index .estilos-populares {
-          grid-area: estilos-populares; }
-        body .main-index .productos {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: start;
-          justify-content: space-around; }
-      body .main-tienda {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr;
-        grid-template-rows: 1fr auto auto auto auto auto;
-        grid-auto-flow: row;
-        grid-template-areas: "titulo-tienda titulo-tienda titulo-tienda" "filtros-tienda filtros-tienda filtros-tienda" "tienda-promociones tienda-promociones tienda-promociones" "tienda-geles tienda-geles tienda-geles" "tienda-tijeras tienda-tijeras tienda-tijeras" "tienda-tintes tienda-tintes tienda-tintes"; } }
+        grid-template-areas: "titulo-index titulo-index" "estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas"; } }
