@@ -189,8 +189,8 @@ body{
         grid-auto-flow: row;
         grid-template-areas:
           "titulo-estilos titulo-estilos titulo-estilos titulo-estilos titulo-estilos"
-          "filtros estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino"
-          "filtros estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino";
+          "filtro-estilos estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino"
+          "filtro-estilos estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino";
         
         .titulo-estilos{
             grid-area: titulo-estilos;
@@ -198,7 +198,7 @@ body{
             display: flex;
             justify-content: center;
         }
-        .filtros { grid-area: filtros; 
+        .filtro-estilos { grid-area: filtro-estilos; 
             background-color: $color_filtros;
         }
         .estilos-corte-masculino { grid-area: estilos-corte-masculino; 
@@ -371,7 +371,7 @@ body{
             }
         }
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 750px) {
         /* main-index responsiv */
         .main-index {  display: grid;
             grid-template-columns: 1fr 1fr;
@@ -382,8 +382,150 @@ body{
               "titulo-index titulo-index"
               "estilos-populares estilos-populares"
               "ofertas-destacadas ofertas-destacadas";
-            
-            
+            .titulo-index { grid-area: titulo-index; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .estilos-populares { grid-area: estilos-populares; }
+            .ofertas-destacadas{ grid-area: ofertas-destacadas; 
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                    }
+                }
+            }    
+        }
+        .main-tienda {  display: grid;
+            grid-template-columns: 0.5fr 1fr 1fr;
+            grid-template-rows: 1fr 0.1fr auto auto auto auto;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "titulo-tienda titulo-tienda titulo-tienda"
+              "filtros-tienda filtros-tienda filtros-tienda"
+              "tienda-promociones tienda-promociones tienda-promociones"
+              "tienda-geles tienda-geles tienda-geles"
+              "tienda-tijeras tienda-tijeras tienda-tijeras"
+              "tienda-tintes tienda-tintes tienda-tintes";
+              
+            .titulo-tienda{
+                grid-area: titulo-tienda;
+            }
+            .filtros-tienda{
+                grid-area: filtros-tienda;
+            }
+            .tienda-promociones{
+                grid-area: tienda-promociones;
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+            .tienda-geles{
+                grid-area: tienda-geles;
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+            .tienda-tijeras{
+                grid-area: tienda-tijeras;
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+            .tienda-tintes{
+                grid-area: tienda-tintes;
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+        } 
+        .main-estilos {  display: grid;
+            grid-template-columns: 0.5fr 1fr 1fr;
+            grid-template-rows: 1fr 0.1fr auto auto;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "titulo-estilos titulo-estilos titulo-estilos"
+              "filtro-estilos filtro-estilos filtro-estilos"
+              "estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino"
+              "estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino";
+            .main-estilos{
+                grid-area: main-estilos;
+            }
+            .filtro-estilos{
+                grid-area: filtro-estilos;
+            }
+            .estilos-corte-masculino{
+                grid-area: estilos-corte-masculino;
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+            .estilos-corte-femenino{
+                grid-area: estilos-corte-femenino;
+                .productos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    .card{
+                        width: 210px;
+                        margin-top: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        .main-turnos{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "titulo-turnos titulo-turnos"
+            "formulario formulario";
+            .titulo-turnos{
+                grid-area: titulo-turnos;
+            }
+            .formulario{
+                grid-area: formulario;
+                margin: 20px;
+            }
         }
     }
 }

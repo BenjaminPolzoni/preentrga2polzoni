@@ -174,8 +174,8 @@ a{
   grid-auto-flow: row;
   grid-template-areas:
     "titulo-estilos titulo-estilos titulo-estilos titulo-estilos titulo-estilos"
-    "filtros estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino"
-    "filtros estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino";
+    "filtro-estilos estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino"
+    "filtro-estilos estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino";
 }
 .titulo-estilos{
  grid-area: titulo-estilos;
@@ -355,7 +355,7 @@ background-color: rgb(65, 46, 17);
         justify-content: center;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
     /* main-index responsiv */
     .main-index {  display: grid;
         grid-template-columns: 1fr 1fr;

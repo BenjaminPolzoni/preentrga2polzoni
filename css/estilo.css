@@ -142,14 +142,14 @@ body {
     grid-template-rows: auto auto 1fr;
     grid-auto-columns: 1fr;
     grid-auto-flow: row;
-    grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos titulo-estilos titulo-estilos" "filtros estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "filtros estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
+    grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos titulo-estilos titulo-estilos" "filtro-estilos estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "filtro-estilos estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
     body .main-estilos .titulo-estilos {
       grid-area: titulo-estilos;
       background-image: linear-gradient(#f9d1a0, #412e11);
       display: flex;
       justify-content: center; }
-    body .main-estilos .filtros {
-      grid-area: filtros;
+    body .main-estilos .filtro-estilos {
+      grid-area: filtro-estilos;
       background-color: #7e7e7e; }
     body .main-estilos .estilos-corte-masculino {
       grid-area: estilos-corte-masculino;
@@ -280,7 +280,7 @@ body {
           body header .menu .navegacion-li {
             margin-left: 0;
             margin: 1rem; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 750px) {
     body {
       /* main-index responsiv */ }
       body .main-index {
@@ -289,4 +289,109 @@ body {
         grid-template-rows: auto auto auto;
         grid-auto-columns: 1fr;
         grid-auto-flow: row;
-        grid-template-areas: "titulo-index titulo-index" "estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas"; } }
+        grid-template-areas: "titulo-index titulo-index" "estilos-populares estilos-populares" "ofertas-destacadas ofertas-destacadas"; }
+        body .main-index .titulo-index {
+          grid-area: titulo-index;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        body .main-index .estilos-populares {
+          grid-area: estilos-populares; }
+        body .main-index .ofertas-destacadas {
+          grid-area: ofertas-destacadas; }
+          body .main-index .ofertas-destacadas .productos {
+            display: flex;
+            flex-wrap: wrap; }
+            body .main-index .ofertas-destacadas .productos .card {
+              width: 210px;
+              margin-top: 10px; }
+      body .main-tienda {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr auto auto auto auto;
+        grid-auto-flow: row;
+        grid-template-areas: "titulo-tienda titulo-tienda titulo-tienda" "filtros-tienda filtros-tienda filtros-tienda" "tienda-promociones tienda-promociones tienda-promociones" "tienda-geles tienda-geles tienda-geles" "tienda-tijeras tienda-tijeras tienda-tijeras" "tienda-tintes tienda-tintes tienda-tintes"; }
+        body .main-tienda .titulo-tienda {
+          grid-area: titulo-tienda; }
+        body .main-tienda .filtros-tienda {
+          grid-area: filtros-tienda; }
+        body .main-tienda .tienda-promociones {
+          grid-area: tienda-promociones; }
+          body .main-tienda .tienda-promociones .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .main-tienda .tienda-promociones .productos .card {
+              width: 210px;
+              margin-top: 10px;
+              margin: 5px; }
+        body .main-tienda .tienda-geles {
+          grid-area: tienda-geles; }
+          body .main-tienda .tienda-geles .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .main-tienda .tienda-geles .productos .card {
+              width: 210px;
+              margin-top: 10px;
+              margin: 5px; }
+        body .main-tienda .tienda-tijeras {
+          grid-area: tienda-tijeras; }
+          body .main-tienda .tienda-tijeras .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .main-tienda .tienda-tijeras .productos .card {
+              width: 210px;
+              margin-top: 10px;
+              margin: 5px; }
+        body .main-tienda .tienda-tintes {
+          grid-area: tienda-tintes; }
+          body .main-tienda .tienda-tintes .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .main-tienda .tienda-tintes .productos .card {
+              width: 210px;
+              margin-top: 10px;
+              margin: 5px; }
+      body .main-estilos {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr auto auto;
+        grid-auto-flow: row;
+        grid-template-areas: "titulo-estilos titulo-estilos titulo-estilos" "filtro-estilos filtro-estilos filtro-estilos" "estilos-corte-masculino estilos-corte-masculino estilos-corte-masculino" "estilos-corte-femenino estilos-corte-femenino estilos-corte-femenino"; }
+        body .main-estilos .main-estilos {
+          grid-area: main-estilos; }
+        body .main-estilos .filtro-estilos {
+          grid-area: filtro-estilos; }
+        body .main-estilos .estilos-corte-masculino {
+          grid-area: estilos-corte-masculino; }
+          body .main-estilos .estilos-corte-masculino .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .main-estilos .estilos-corte-masculino .productos .card {
+              width: 210px;
+              margin-top: 10px;
+              margin: 5px; }
+        body .main-estilos .estilos-corte-femenino {
+          grid-area: estilos-corte-femenino; }
+          body .main-estilos .estilos-corte-femenino .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            body .main-estilos .estilos-corte-femenino .productos .card {
+              width: 210px;
+              margin-top: 10px;
+              margin: 5px; }
+      body .main-turnos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "titulo-turnos titulo-turnos" "formulario formulario"; }
+        body .main-turnos .titulo-turnos {
+          grid-area: titulo-turnos; }
+        body .main-turnos .formulario {
+          grid-area: formulario;
+          margin: 20px; } }
